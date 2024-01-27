@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "819aa8f9-d10b-40f0-8d43-e56d12be8bd9",
+		"name": "noteApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26559151",
+		"_collection_link": "https://www.postman.com/flight-astronaut-59344314/workspace/my-workspace/collection/26559151-819aa8f9-d10b-40f0-8d43-e56d12be8bd9?action=share&source=collection_link&creator=26559151"
+	},
+	"item": [
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "addNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\":\"finish task\",\r\n    \"user\": \"65ab6910261bce54cb7cc3cf\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/note",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNote",
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\":\"finish task\",\r\n    \"user\": \"65ab6910261bce54cb7cc3cf\",\r\n    \"isCompleted\":\"true\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/note/65ac7f9f302a15a887bc83bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								"65ac7f9f302a15a887bc83bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllNotes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "userNotes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD on Note App ( user can add , delete , update , get all notes , get user notes )"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "User can Sign And Log in"
+		}
+	]
+}
